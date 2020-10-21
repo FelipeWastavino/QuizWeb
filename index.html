@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<html5>
+<meta charset="UTF-8">
+<meta title="Formulario">
+<meta name="description" content="Formulario para Ingeniería web 2020-2do semestre">
+<meta name="keywords" content="HTML,CSS,JS,Formulario,Ingeniería Web">
+<meta name="author" content="Felipe Wastavino">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <body style="background-color: gray;">
+        <script src="functions.js"></script> 
+        <form id="myForm" style="background-color: lightgray;margin-left: 30%;margin-top: 10%;max-width: 40%;max-height: auto;border-style: groove;border-radius: 5%;">
+            <div class="form-group" style="padding-top: 5%;padding-left: 5%;">
+                <label>Nombre Completo: </label>
+                <input name="nombre" type="text" required>
+            </div>
+            <div class="form-group" style="padding-left: 5%;"">
+                <label>Correo electrónico: </label>
+                <input name="correo" type="email" required>
+            </div>
+            <div class="form-group" style="padding-left: 5%;">
+                <label>Tipo de Documento: </label>
+                <div>
+                <input name="tipodoc" type="radio" id="DNI" onclick="javascript:DNIRUTcheck()"> DNI
+                    <div id="ifDNI" style="display:block">
+                        <input type="text" id="texto-dni" name="texto-dni">
+                    </div>
+                </div>
+
+                <div>
+                <input name="tipodoc" type="radio" id="RUT" onclick="javascript:DNIRUTcheck()"> RUT
+                    <div id="ifRUT" style="display: none;">
+                        <input type="number" id="numero-rut" name="numero-rut">
+                    </div>
+                </div>
+            </div>
+            <div class="mensaje" id="message" style="padding-left: 5%;">Sus datos aún no han sido enviados</div>
+            <div style="padding-left: 5%;padding-bottom: 5%;">
+                <input type="button" class="btn btn-primary" value="Registrar" onclick="javascript:myFunction()">
+            </div>
+        </form>
+
+    </body>
+</html5>

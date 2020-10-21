@@ -26,21 +26,21 @@
                 <label>Tipo de Documento: </label>
                 <div>
                 <input name="tipodoc" type="radio" id="DNI" onclick="javascript:DNIRUTcheck()"> DNI
-                    <div id="ifDNI" style="display:block">
-                        <input type="text" id="texto-dni" name="texto-dni">
+                    <div id="ifDNI" style="display:none">
+                        <input type="text" id="texto-dni" name="texto-dni" required>
                     </div>
                 </div>
 
                 <div>
                 <input name="tipodoc" type="radio" id="RUT" onclick="javascript:DNIRUTcheck()"> RUT
                     <div id="ifRUT" style="display: none;">
-                        <input type="number" id="numero-rut" name="numero-rut">
+                        <input type="number" id="numero-rut" name="numero-rut" required>
                     </div>
                 </div>
             </div>
             <div class="mensaje" id="message" style="padding-left: 5%;">Sus datos aún no han sido enviados</div>
             <div style="padding-left: 5%;padding-bottom: 5%;">
-                <input type="button" class="btn btn-primary" value="Registrar" onclick="javascript:myFunction()">
+                <input type="submit" class="btn btn-primary" value="Registrar" onclick="javascript:myFunction()">
             </div>
         </form>
 

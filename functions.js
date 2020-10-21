@@ -16,8 +16,15 @@ function validateForm() {
         alert("Parece que olvidó ingresar su correo");
         return false;
     }
+    var w = document.forms["myForm"]["texto-dni"].value;
+    var z = document.forms["myForm"]["numero-rut"].value;
+    if ((w == "") && (z == "")) {
+        alert("Le falta un último campo por completar");
+        return false;
+    }
+
     else {
-        return true
+        return true;
     }
 } 
 
